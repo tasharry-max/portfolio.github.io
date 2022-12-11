@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import {keyframes} from 'styled-components';
 import {motion} from 'framer-motion';
 import LogoComponent from '../subComponents/LogoComponent';
-import PowerButton from '../subComponents/PowerButton';
+// import PowerButton from '../subComponents/PowerButton';
 import SocialIcons from '../subComponents/SocialIcons';
 import {YinYang} from './AllSvgs';
 import Intro from './Intro';
@@ -139,9 +139,8 @@ const Main = () => {
     return (
         <MainContainer>
             <Container>
-
                 <DarkDiv click={click}/>
-                <PowerButton/>
+                {/* <PowerButton/> */}
                 <LogoComponent
                     theme={click
                     ? 'dark'
@@ -161,7 +160,7 @@ const Main = () => {
                         ? 120
                         : 200}
                         fill="currentColor"/>
-                    <span>click here hard</span>
+                    <span>click here</span>
                 </Center>
 
                 <Contact
@@ -169,20 +168,50 @@ const Main = () => {
                     to={{
                     pathname: "mailto:nataly.rudnitskaya@gmail.com"
                 }}>
-                    <motion.h3 whileHover={{scale:1.2}} whileTap={{scale:0.8}}>Say hi..</motion.h3>
+                    <motion.h3
+                        whileHover={{
+                        scale: 1.2
+                    }}
+                        whileTap={{
+                        scale: 0.8
+                    }}>Say hi..</motion.h3>
                 </Contact>
                 <Work to="/work" click={click}>
-                    <motion.h3 whileHover={{scale:1.2}} whileTap={{scale:0.8}}>Work</motion.h3>
+                    <motion.h3
+                        whileHover={{
+                        scale: 1.2
+                    }}
+                        whileTap={{
+                        scale: 0.8
+                    }}>Work</motion.h3>
                 </Work>
                 <MySkills to="/skills">
-                    <motion.h3 whileHover={{scale:1.2}} whileTap={{scale:0.8}}>Skills</motion.h3>
+                    <motion.h3
+                        whileHover={{
+                        scale: 1.2
+                    }}
+                        whileTap={{
+                        scale: 0.8
+                    }}>Skills</motion.h3>
                 </MySkills>
                 <BottomBar>
                     <About to="/about" click={click}>
-                        <motion.h3 whileHover={{scale:1.2}} whileTap={{scale:0.8}}>About</motion.h3>
+                        <motion.h3
+                            whileHover={{
+                            scale: 1.2
+                        }}
+                            whileTap={{
+                            scale: 0.8
+                        }}>About</motion.h3>
                     </About>
                     <Blog to="/blog">
-                        <motion.h3 whileHover={{scale:1.2}} whileTap={{scale:0.8}}>Blog</motion.h3>
+                        <motion.h3
+                            whileHover={{
+                            scale: 1.2
+                        }}
+                            whileTap={{
+                            scale: 0.8
+                        }}>For Fun...</motion.h3>
                     </Blog>
                 </BottomBar>
             </Container>
