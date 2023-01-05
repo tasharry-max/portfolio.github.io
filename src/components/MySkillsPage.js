@@ -34,6 +34,7 @@ cursor: pointer;
   color: ${props => props.theme.body};
   background:${props => props.theme.text};
   opacity:0.9;
+  transition: 0.3s all ease-in;
 }
 `
 
@@ -85,7 +86,7 @@ const MySkillsPage = () => {
                     <Description>
                         <h3>Skills</h3>
                         <div>
-                            HTML, CSS, styled-components, React, MobX, Typescript
+                            HTML, CSS, JavaScript, Styled-components, React, MobX
                         </div>
                         <h3>Tools</h3>
                         <div>Vscode, Git, Figma, Adobe Photoshop</div>
