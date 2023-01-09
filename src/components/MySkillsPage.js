@@ -89,7 +89,7 @@ const MySkillsPage = () => {
                             HTML, CSS, JavaScript, Styled-components, React, MobX
                         </div>
                         <h3>Tools</h3>
-                        <div>Vscode, Git, Figma, Adobe Photoshop</div>
+                        <div>VCode, Git, Figma</div>
                     </Description>
                 </Main>
             </Box>
