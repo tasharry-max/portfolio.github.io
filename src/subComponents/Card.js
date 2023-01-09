@@ -32,7 +32,7 @@ const CardStyle = styled.div `
 
 const Card = ({data}) => {
 
-    const {id, name, company, description, tags} = data;
+    const {id, name, company, date, description, tags} = data;
     return (
         <CardStyle key={id}>
             <div>
@@ -44,10 +44,11 @@ const Card = ({data}) => {
                  <li>{d}</li>
                 )}
             </ul>
-
+            
             <div> 
             {tags.map(t => <h5>{`#${t}`}</h5>)}
             </div> 
+            <h4>{date}</h4>
         </CardStyle>
     )
 }

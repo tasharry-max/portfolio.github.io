@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 import styled from 'styled-components'
-import {Facebook, Github, Twitter} from '../components/AllSvgs'
+import {Facebook, Github, Linkedin} from '../components/AllSvgs'
 import {darkTheme, lightTheme} from "../components/Themes"
 
 const Icons = styled.div `
@@ -35,7 +35,7 @@ const SocialIcons = (props) => {
                 }}
                     target="_blank"
                     to={{
-                    pathname: ""
+                    pathname: "https://github.com/tasharry-max"
                 }}>
                     <Github
                         width={25}
@@ -52,9 +52,9 @@ const SocialIcons = (props) => {
                 }}
                     target="_blank"
                     to={{
-                    pathname: ""
+                    pathname: "https://www.linkedin.com/in/nataly-rudnitskaya-609039183/"
                 }}>
-                    <Twitter
+                    <Linkedin
                         width={25}
                         height={25}
                         fill={props.theme === "dark"
@@ -69,7 +69,7 @@ const SocialIcons = (props) => {
                 }}
                     target="_blank"
                     to={{
-                    pathname: ""
+                    pathname: "https://www.facebook.com/profile.php?id=100006387434382"
                 }}>
                     <Facebook
                         width={25}

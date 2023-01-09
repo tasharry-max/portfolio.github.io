@@ -3,7 +3,7 @@ export const Work = [
         id:1,
         name:"Frontend Developer",
         company: "Rinf.tech",
-        description: ["Rebuilt the company's website, initially built on WordPress using React", "Delivered a responsive crossbrowser compatible website", "Worked on optimization, achieving faster load time.Implemented a new functionality"],
+        description: ["Migrating the cloud-software of project in its frontend parts on React", "Creating new maintainable functionality", "Implemented forms, tables for users using Formik" ],
         tags:["react","formik","styled-components"],
         date:"2022",
     },
