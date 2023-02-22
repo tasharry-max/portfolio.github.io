@@ -4,7 +4,7 @@ export const Work = [
         name:"Frontend Developer",
         company: "Rinf.tech",
         description: ["Migrating the cloud-software of project in its frontend parts on React", "Creating new maintainable functionality", "Implemented forms, tables for users using Formik" ],
-        tags:["react","formik","styled-components"],
+        tags:["react","react-formik","styled-components"],
         date:"2022",
     },
     {

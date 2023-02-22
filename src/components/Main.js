@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import {keyframes} from 'styled-components';
 import {motion} from 'framer-motion';
 import LogoComponent from '../subComponents/LogoComponent';
-// import PowerButton from '../subComponents/PowerButton';
 import SocialIcons from '../subComponents/SocialIcons';
 import {YinYang} from './AllSvgs';
 import Intro from './Intro';
@@ -15,7 +14,6 @@ const MainContainer = styled.div `
   height: 100vh;
   overflow: hidden;
   position: relative;
-
   h2, h3, h4 ,h5, h6{
     font-family: 'Karla', sans-serif;
     font-weight: 500;
@@ -101,9 +99,8 @@ const Center = styled.button `
   justify-content: center;
   align-items: center;
   transition: all 1s ease;
-
   &>:first-child{
-    animation: ${rotate} infinite 1.5s linear;
+    animation: ${rotate} infinite 2s linear;
   }
 
   &>:last-child{
@@ -140,7 +137,6 @@ const Main = () => {
         <MainContainer>
             <Container>
                 <DarkDiv click={click}/>
-                {/* <PowerButton/> */}
                 <LogoComponent
                     theme={click
                     ? 'dark'

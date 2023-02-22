@@ -61,9 +61,9 @@ const Intro = () => {
         <Box initial={{height:0}} animate={{height:'55vh'}} transition={{ type: "spring", duration: 2, delay: 1}}>
             <SubBox>
                 <Text>
-                    <h1>Aloha,</h1>
+                    <h1>Welcome</h1>
                     <h3>I'm Nataly</h3>
-                    <h4>I am Frontend Developer</h4>
+                    <h4>Frontend Developer who cares deeply about user experience. Serious passion for UI design and new technologies.</h4>
                 </Text>
             </SubBox>
             <SubBox>

@@ -1,12 +1,25 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import {ThemeProvider} from 'styled-components'
-import {lightTheme} from './Themes'
+import {darkTheme} from './Themes'
+import {motion} from 'framer-motion'
 import styled from 'styled-components'
-import {Developer} from "./AllSvgs"
+import {
+    HTMLIcon,
+    CSSIcon,
+    ReactIcon,
+    JSIcon,
+    MobxIcon,
+    StyledComponentsIcon,
+    GitIcon,
+    VSCodeIcon,
+    FigmaIcon,
+    WebpackIcon
+} from "./AllSvgs"
 import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons from '../subComponents/SocialIcons'
 import PowerButton from '../subComponents/PowerButton'
 import ParticleComponent from '../subComponents/ParticleComponent'
+import {NavLink} from 'react-router-dom'
 
 const Box = styled.div `
 background-color: ${props => props.theme.body};
@@ -19,22 +32,18 @@ align-items: center;
 `
 
 const Main = styled.div `
-background-color: ${props => props.theme.body};
-
-border: 2px solid ${props => props.theme.text};
-width: 60vw;
-height: 60vh;
+width: 100vw;
+height: 80vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
 color: ${props => props.theme.text};
 z-index: 3;
 line-height: 1.5;
 font-family: 'Ubuntu Mono', monospace;
-cursor: pointer;
-
-&:hover{
-  color: ${props => props.theme.body};
-  background:${props => props.theme.text};
-  opacity:0.9;
-  transition: 0.3s all ease-in;
+svg {
+  width: 5rem;
+  height: 5rem;
 }
 `
 
@@ -42,54 +51,64 @@ const Title = styled.h2 `
 display: flex;
 justify-content: center;
 align-items: center;
-font-size: calc(1em + 2vw);
-padding: 0.5rem;
-
-${Main}:hover &{
-  &>*{
-    fill:${props => props.theme.body}
-  }
-}
+font-size: calc(1em + 1.5vw);
 &>*:first-child{
   margin-right:1rem;
 }
 `
 
-const Description = styled.div `
+const Description = styled(motion.div)`
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align: center;
-padding: 0.5rem 2rem;
+padding: 0 0.5rem;
 font-size: calc(0.5em + 1vw);
+h2 {
+  margin: 2rem;
+}
+`
+const StyledIcons = styled.div `
+  display: flex;
+  width: 70%;
+  height: 96px;
+  justify-content: space-around;
+  align-items: center;
+  svg{
+    cursor: pointer;
+  }
 `
 
 const MySkillsPage = () => {
+    const constraintsRef = useRef(null);
     return (
-        <ThemeProvider theme={lightTheme}>
+        <ThemeProvider theme={darkTheme}>
             <Box>
-              <LogoComponent/>
-              <SocialIcons />
-              <PowerButton/>
-              <ParticleComponent theme="light"/>
+                <NavLink to="/">
+                    <LogoComponent theme="dark"/>
+                </NavLink>
+                <SocialIcons theme="dark"/>
+                <PowerButton/>
+                <ParticleComponent theme="dark"/>
                 <Main>
-                    <Title>
-                        <Developer width={40} height={40}/>
-                        Frontend Developer
-                    </Title>
-                    <Description>
-                        I enjoy bringing new ideas to life. Building web apps with React feels like
-                        taking those first few steps into a magical world full of possibilities and
-                        wonder.
-                    </Description>
-                    <Description>
-                        <h3>Skills</h3>
-                        <div>
-                            HTML, CSS, JavaScript, Styled-components, React, MobX
-                        </div>
-                        <h3>Tools</h3>
-                        <div>VCode, Git, Figma</div>
+                    <Title>Frontend Developer</Title>
+                    <Description className="container" ref={constraintsRef}>
+                        <h2>Skills</h2>
+                        <StyledIcons>
+                            <HTMLIcon dragConstraints={constraintsRef}/>
+                            <CSSIcon dragConstraints={constraintsRef}/>
+                            <JSIcon/>
+                            <ReactIcon/>
+                            <MobxIcon/>
+                            <StyledComponentsIcon/>
+                        </StyledIcons>
+                        <StyledIcons>
+                            <VSCodeIcon/>
+                            <WebpackIcon/>
+                            <GitIcon/>
+                            <FigmaIcon/>
+                        </StyledIcons>
                     </Description>
                 </Main>
             </Box>

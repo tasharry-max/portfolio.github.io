@@ -5,9 +5,10 @@ import styled from 'styled-components'
 import LogoComponent from '../subComponents/LogoComponent'
 // import SocialIcons from '../subComponents/SocialIcons'
 import PowerButton from '../subComponents/PowerButton'
-import { Work } from '../data/Work'
+import {Work} from '../data/Work'
 import Card from '../subComponents/Card'
 import ParticleComponent from '../subComponents/ParticleComponent'
+import {NavLink} from 'react-router-dom'
 
 const Box = styled.div `
 background-color: ${props => props.theme.body};
@@ -30,17 +31,16 @@ const WorkPage = () => {
     return (
         <ThemeProvider theme={darkTheme}>
             <Box>
-            <ParticleComponent theme="dark"/>
-                <LogoComponent theme="dark"/>
-                <PowerButton theme="dark"/>  
+                <ParticleComponent theme="dark"/>
+                <NavLink to="/">
+                    <LogoComponent theme="dark"/>
+                </NavLink>
+                <PowerButton theme="dark"/>
                 <Main>
-                   {
-                    Work.map(d => 
-                      <Card key={d.id} data={d}></Card>
-                    )
-                   }
+                    {Work.map(d => <Card key={d.id} data={d}></Card>)
+}
                 </Main>
-            
+
             </Box>
         </ThemeProvider>
     )
