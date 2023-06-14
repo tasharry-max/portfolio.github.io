@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "terminal.integrated.inheritEnv": false,
+    "homepage": "https://tasharry-max.github.io/portfolio_tasharry",
     "dependencies": {
         "@react-spring/web": "^9.7.1",
         "@testing-library/jest-dom": "^5.14.1",
@@ -23,7 +24,9 @@
         "start": "react-scripts --openssl-legacy-provider start",
         "build": "react-scripts --openssl-legacy-provider build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": "next",
