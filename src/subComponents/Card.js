@@ -46,7 +46,8 @@ const Card = ({data}) => {
         tags
     } = data;
     return (
-        <CardStyle key={id}>
+      /* eslint-disable */
+        <CardStyle key={id}> 
             <div>
                 <h4>{name}</h4>
                 <h4>{company}</h4>
@@ -60,6 +61,7 @@ const Card = ({data}) => {
             </div>
             <h4>{date}</h4>
         </CardStyle>
+        /* eslint-enable */
     )
 }
 
