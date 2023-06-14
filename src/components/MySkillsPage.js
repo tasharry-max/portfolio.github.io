@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React from 'react'
 import {ThemeProvider} from 'styled-components'
 import {darkTheme} from './Themes'
 import {motion} from 'framer-motion'
@@ -69,11 +69,13 @@ h2 {
   margin: 2rem;
 }
 `
-const StyledIcons = styled.div `
+
+const StyledIcons = styled(motion.div)`
   display: flex;
   width: 70%;
-  height: 96px;
+  height: 150px;
   justify-content: space-around;
+  padding: 2rem;
   align-items: center;
   svg{
     cursor: pointer;
@@ -81,7 +83,6 @@ const StyledIcons = styled.div `
 `
 
 const MySkillsPage = () => {
-    const constraintsRef = useRef(null);
     return (
         <ThemeProvider theme={darkTheme}>
             <Box>
@@ -92,18 +93,75 @@ const MySkillsPage = () => {
                 <PowerButton/>
                 <ParticleComponent theme="dark"/>
                 <Main>
-                    <Title>Frontend Developer</Title>
-                    <Description className="container" ref={constraintsRef}>
-                        <h2>Skills</h2>
-                        <StyledIcons>
-                            <HTMLIcon dragConstraints={constraintsRef}/>
-                            <CSSIcon dragConstraints={constraintsRef}/>
+                    <motion.div
+                        initial="hidden"
+                        animate="visible"
+                        variants={{
+                        hidden: {
+                            scale: .6,
+                            opacity: 0
+                        },
+                        visible: {
+                            scale: 1,
+                            opacity: 1,
+                            transition: {
+                                delay: .2
+                            }
+                        }
+                    }}>
+                    </motion.div>
+                    <Description className="container">
+                        <motion.h2
+                            initial="hidden"
+                            animate="visible"
+                            variants={{
+                            hidden: {
+                                scale: .8,
+                                opacity: 0
+                            },
+                            visible: {
+                                scale: 1,
+                                opacity: 1,
+                                transition: {
+                                    delay: .3
+                                }
+                            }
+                        }}>Skills</motion.h2>
+                        <StyledIcons
+                            initial={{
+                            opacity: 0,
+                            scale: 0.5
+                        }}
+                            animate={{
+                            opacity: 1,
+                            scale: 1
+                        }}
+                            transition={{
+                            duration: 0.8,
+                            delay: 0.6,
+                            ease: "linear"
+                        }}>
+                            <HTMLIcon/>
+                            <CSSIcon/>
                             <JSIcon/>
                             <ReactIcon/>
                             <MobxIcon/>
                             <StyledComponentsIcon/>
                         </StyledIcons>
-                        <StyledIcons>
+                        <StyledIcons
+                            initial={{
+                            opacity: 0,
+                            scale: 0.5
+                        }}
+                            animate={{
+                            opacity: 1,
+                            scale: 1
+                        }}
+                            transition={{
+                            duration: 0.8,
+                            delay: 1.4,
+                            ease: "linear"
+                        }}>
                             <VSCodeIcon/>
                             <WebpackIcon/>
                             <GitIcon/>

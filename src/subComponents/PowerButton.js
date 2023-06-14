@@ -24,7 +24,7 @@ const Power = styled.button `
     cursor: pointer;
 
     &:hover{
-        background-color: rgba(0, 255, 0, 0.4);
+        background: rgba(149, 66, 232, 0.75);
         box-shadow: 0 0 8px 6px rgba(0, 255, 0, 0.1);
     }
 

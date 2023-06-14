@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Me from '../assets/Images/profile-img.png';
-import { motion } from 'framer-motion';
+import Me from '../assets/Images/profile-img.gif';
+import {motion} from 'framer-motion';
 
 const Box = styled(motion.div)`
   width: 55vw;
@@ -11,7 +11,6 @@ const Box = styled(motion.div)`
   transform: translate(-50%, -50%);
   position: absolute;
   display: flex;
- 
   background: linear-gradient(
     to right,
     ${props => props.theme.body} 50%,
@@ -58,16 +57,42 @@ justify-content: space-evenly;
 
 const Intro = () => {
     return (
-        <Box initial={{height:0}} animate={{height:'55vh'}} transition={{ type: "spring", duration: 2, delay: 1}}>
+        <Box
+            initial={{
+            height: 0
+        }}
+            animate={{
+            height: '55vh'
+        }}
+            transition={{
+            type: "spring",
+            duration: 2,
+            delay: 1
+        }}>
             <SubBox>
                 <Text>
                     <h1>Welcome</h1>
                     <h3>I'm Nataly</h3>
-                    <h4>Frontend Developer who cares deeply about user experience. Serious passion for UI design and new technologies.</h4>
+                    <h4>
+                        Frontend Developer who cares deeply about user experience.
+                        I thrive on taking on new challenges that expand my skill set and push me to be
+                        the best developer I can be.
+                    </h4>
+                    <h3>Let's work together to create something amazing!</h3>
                 </Text>
             </SubBox>
             <SubBox>
-                <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{ duration: 1, delay: 2}}>
+                <motion.div
+                    initial={{
+                    opacity: 0
+                }}
+                    animate={{
+                    opacity: 1
+                }}
+                    transition={{
+                    duration: 1,
+                    delay: 2
+                }}>
                     <img src={Me} className='pic' alt='ProfilePicture'/>
                 </motion.div>
             </SubBox>

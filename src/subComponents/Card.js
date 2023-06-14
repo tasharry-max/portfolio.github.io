@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components';
 
 const CardStyle = styled.div `
-  border: 1px solid white;
+  background: white;
+  box-shadow: 0 0 25px rgba(0,0,0,.2);
   padding: 1.5rem 2rem;
   margin: 1rem;
   display: flex;
@@ -13,41 +14,50 @@ const CardStyle = styled.div `
   font-size: calc(0.5em + 1vw);
   li {
     font-size: calc(0.5em + 0.3vw);
+    color:black;
   }
   h5{
     font-size: calc(0.5em + 0.5vw);
     padding-right: 0.2rem;
+    color:black;
   }
   h4 {
     padding-bottom: 1rem;
     display: block;
+    color:black;
   }
   &:hover{
     background: white;
     color: black;
     cursor: pointer;
-    transition: 0.4s all ease-in;
+    box-shadow: 0 0 145px white;
+    transition: 0.2s all ease-in;
   }
 `;
 
 const Card = ({data}) => {
 
-    const {id, name, company, date, description, tags} = data;
+    const {
+        id,
+        name,
+        company,
+        date,
+        description,
+        tags
+    } = data;
     return (
         <CardStyle key={id}>
             <div>
-            <h4>{name}</h4>
-            <h4>{company}</h4>
+                <h4>{name}</h4>
+                <h4>{company}</h4>
             </div>
             <ul>
-                {description.map(d => 
-                 <li>{d}</li>
-                )}
+                {description.map(d => <li>{d}</li>)}
             </ul>
-            
-            <div> 
-            {tags.map(t => <h5>{`#${t}`}</h5>)}
-            </div> 
+
+            <div>
+                {tags.map(t => <h5>{`#${t}`}</h5>)}
+            </div>
             <h4>{date}</h4>
         </CardStyle>
     )
