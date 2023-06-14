@@ -6,7 +6,6 @@ import {motion} from 'framer-motion';
 import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons from '../subComponents/SocialIcons'
 import PowerButton from '../subComponents/PowerButton'
-import ParticleComponent from '../subComponents/ParticleComponent'
 import astronaut from '../assets/Images/spaceman.png'
 import {NavLink} from 'react-router-dom'
 
@@ -103,7 +102,6 @@ const AboutPage = () => {
                 </NavLink>
                 <SocialIcons theme="dark"/>
                 <PowerButton theme="dark"/>
-                <ParticleComponent theme="dark"/>
                 <Spaceman>
                     <img src={astronaut} alt="spaceman"/>
                 </Spaceman>

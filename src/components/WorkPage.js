@@ -7,7 +7,6 @@ import LogoComponent from '../subComponents/LogoComponent'
 import PowerButton from '../subComponents/PowerButton'
 import {Work} from '../data/Work'
 import Card from '../subComponents/Card'
-import ParticleComponent from '../subComponents/ParticleComponent'
 import {NavLink} from 'react-router-dom'
 
 const Box = styled.div `
@@ -31,7 +30,7 @@ const WorkPage = () => {
     return (
         <ThemeProvider theme={darkTheme}>
             <Box>
-                <ParticleComponent theme="dark"/>
+  
                 <NavLink to="/">
                     <LogoComponent theme="dark"/>
                 </NavLink>

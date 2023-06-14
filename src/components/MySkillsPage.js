@@ -18,7 +18,7 @@ import {
 import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons from '../subComponents/SocialIcons'
 import PowerButton from '../subComponents/PowerButton'
-import ParticleComponent from '../subComponents/ParticleComponent'
+
 import {NavLink} from 'react-router-dom'
 
 const Box = styled.div `
@@ -44,16 +44,6 @@ font-family: 'Ubuntu Mono', monospace;
 svg {
   width: 5rem;
   height: 5rem;
-}
-`
-
-const Title = styled.h2 `
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: calc(1em + 1.5vw);
-&>*:first-child{
-  margin-right:1rem;
 }
 `
 
@@ -91,7 +81,7 @@ const MySkillsPage = () => {
                 </NavLink>
                 <SocialIcons theme="dark"/>
                 <PowerButton/>
-                <ParticleComponent theme="dark"/>
+         
                 <Main>
                     <motion.div
                         initial="hidden"
