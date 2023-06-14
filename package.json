@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "terminal.integrated.inheritEnv": false,
-    "homepage": "https://tasharry-max.github.io/portfolio",
+    "homepage": "https://tasharry-max.github.io/portfolio.github.io/",
     "dependencies": {
         "@react-spring/web": "^9.7.1",
         "@testing-library/jest-dom": "^5.14.1",
