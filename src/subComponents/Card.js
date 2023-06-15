@@ -49,7 +49,7 @@ const Card = ({data}) => {
       /* eslint-disable */
         <CardStyle key={id}> 
             <div>
-                <h4>{name}</h4>
+                <h4>{name}{name}</h4>
                 <h4>{company}</h4>
             </div>
             <ul>
