@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/portfolio.github.io/static/css/main.58462fbc.css",
-    "main.js": "/portfolio.github.io/static/js/main.78f53630.js",
-    "static/media/profile-img.gif": "/portfolio.github.io/static/media/profile-img.0daa370817e4d3c94cfa.gif",
-    "static/media/spaceman.png": "/portfolio.github.io/static/media/spaceman.5ec7fcfa9a803ead726c.png",
-    "index.html": "/portfolio.github.io/index.html",
-    "main.58462fbc.css.map": "/portfolio.github.io/static/css/main.58462fbc.css.map",
-    "main.78f53630.js.map": "/portfolio.github.io/static/js/main.78f53630.js.map"
+    "main.css": "/static/css/main.58462fbc.css",
+    "main.js": "/static/js/main.de0e36fc.js",
+    "static/media/profile-img.gif": "/static/media/profile-img.0daa370817e4d3c94cfa.gif",
+    "static/media/spaceman.png": "/static/media/spaceman.5ec7fcfa9a803ead726c.png",
+    "index.html": "/index.html",
+    "main.58462fbc.css.map": "/static/css/main.58462fbc.css.map",
+    "main.de0e36fc.js.map": "/static/js/main.de0e36fc.js.map"
   },
   "entrypoints": [
     "static/css/main.58462fbc.css",
-    "static/js/main.78f53630.js"
+    "static/js/main.de0e36fc.js"
   ]
 }

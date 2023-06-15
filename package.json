@@ -4,9 +4,9 @@
     "private": true,
     "terminal.integrated.inheritEnv": false,
     "engines": {
-        "node": "14.17.0"
+        "node": "18.15.0"
     },
-    "homepage": "https://tasharry-max.github.io/portfolio.github.io/",
+    "homepage": "https://tasharry-max.github.io/",
     "dependencies": {
         "14": "^3.1.6",
         "@react-spring/web": "^9.7.1",
