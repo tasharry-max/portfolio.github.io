@@ -4,7 +4,7 @@
     "private": true,
     "terminal.integrated.inheritEnv": false,
     "engines": {
-        "node": "18.15.0"
+        "node": "16.20.0"
     },
     "homepage": "https://tasharry-max.github.io/",
     "dependencies": {
