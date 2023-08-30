@@ -51,7 +51,7 @@ const SocialIcons = (props) => {
                 }}
                     target="_blank"
                     to={{
-                    pathname: "https://www.linkedin.com/in/nataly-rudnitskaya-609039183/"
+                    pathname: "https://linkedin.com/in/natali-rudnytska-609039183"
                 }}>
                     <Linkedin
                         width={25}
